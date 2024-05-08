@@ -607,7 +607,6 @@ func (b *BlockStore) createBackup(volumeID, volumeAZ string, tags map[string]str
 		Name:        backupName,
 		VolumeID:    volumeID,
 		Description: "Velero volume backup",
-		Container:   backupName,
 		Metadata:    utils.Merge(originVolume.Metadata, tags),
 		Force:       true,
 	}
